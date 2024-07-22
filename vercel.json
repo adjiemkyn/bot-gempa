@@ -2,12 +2,12 @@
     "version": 2,
     "builds": [
         {
+            "main": "main.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
-            "main": "/(.*)",
             "dest": "main.js"
         }
     ]
