@@ -1,7 +1,7 @@
 {
   "name": "bot",
   "version": "1.0.0",
-  "main": "main.js",
+  "main": "src/main.js",
   "type": "module",
   "scripts": {
     "bot": "nodemon main.js"
@@ -13,5 +13,6 @@
     "node-fetch": "^3.3.2",
     "node-telegram-bot-api": "^0.66.0"
   },
+  "devDependencies": {},
   "description": ""
 }
