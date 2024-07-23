@@ -35,7 +35,7 @@ Waktu : ${Tanggal} | ${Jam}
 Besaran : ${Magnitude}
 Wilayah : ${Wilayah}
 Potensi: ${Potensi}
-        Kedalaman: ${Kedalaman}
+Kedalaman: ${Kedalaman}
         `;
         bot.sendPhoto(callback.from.id, BMKGImage, {
             caption: resultText
