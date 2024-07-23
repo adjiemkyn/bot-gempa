@@ -33,9 +33,9 @@ bot.onText(gempa, async (callback) => {
         const resultText = `
 Waktu : ${Tanggal} | ${Jam}
 Besaran : ${Magnitude}
-Wilayah : ${Wilayah}
-Potensi : ${Potensi}
-Kedalaman : ${Kedalaman}
+Wilayah : ${Wilayah
+Potensi: ${ Potensi }
+        Kedalaman: ${ Kedalaman }
         `;
         bot.sendPhoto(callback.from.id, BMKGImage, {
             caption: resultText
@@ -65,11 +65,11 @@ async function checkForNewData() {
         const { Jam, Magnitude, Tanggal, Wilayah, Potensi, Kedalaman, Shakemap } = newData;
         const BMKGImage = BMKG_ENDPOINT + Shakemap;
         const resultText = `
-Waktu : ${Tanggal} | ${Jam}
-Besaran : ${Magnitude}
-Wilayah : ${Wilayah}
-Potensi : ${Potensi}
-Kedalaman : ${Kedalaman}
+        Waktu: ${ Tanggal } | ${ Jam }
+        Besaran: ${ Magnitude }
+        Wilayah: ${ Wilayah }
+        Potensi: ${ Potensi }
+        Kedalaman: ${ Kedalaman }
         `;
         // Mengirim data ke semua chat ID yang tertangkap
         chatIds.forEach(chatId => {
