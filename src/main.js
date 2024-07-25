@@ -58,30 +58,30 @@ async function fetchBMKGData() {
     }
 }
 
-async function checkForNewData() {
-    const newData = await fetchBMKGData();
-    if (newData && JSON.stringify(newData) !== JSON.stringify(lastGempaData)) {
-        lastGempaData = newData;
-        const { Jam, Magnitude, Tanggal, Wilayah, Potensi, Kedalaman, Shakemap } = newData;
-        const BMKGImage = BMKG_ENDPOINT + Shakemap;
-        const resultText = `
-        Waktu: ${Tanggal} | ${Jam}
-        Besaran: ${Magnitude}
-        Wilayah: ${Wilayah}
-        Potensi: ${Potensi}
-        Kedalaman: ${Kedalaman}
-        `;
-        // Mengirim data ke semua chat ID yang tertangkap
-        chatIds.forEach(chatId => {
-            bot.sendPhoto(chatId, BMKGImage, {
-                caption: resultText
-            });
-        });
-    }
-}
+// async function checkForNewData() {
+//     const newData = await fetchBMKGData();
+//     if (newData && JSON.stringify(newData) !== JSON.stringify(lastGempaData)) {
+//         lastGempaData = newData;
+//         const { Jam, Magnitude, Tanggal, Wilayah, Potensi, Kedalaman, Shakemap } = newData;
+//         const BMKGImage = BMKG_ENDPOINT + Shakemap;
+//         const resultText = `
+//         Waktu: ${Tanggal} | ${Jam}
+//         Besaran: ${Magnitude}
+//         Wilayah: ${Wilayah}
+//         Potensi: ${Potensi}
+//         Kedalaman: ${Kedalaman}
+//         `;
+//         // Mengirim data ke semua chat ID yang tertangkap
+//         chatIds.forEach(chatId => {
+//             bot.sendPhoto(chatId, BMKGImage, {
+//                 caption: resultText
+//             });
+//         });
+//     }
+// }
 
-// Interval untuk memeriksa data baru setiap 5 menit (300000 milidetik)
-setInterval(checkForNewData, 300000);
+// // Interval untuk memeriksa data baru setiap 5 menit (300000 milidetik)
+// setInterval(checkForNewData, 300000);
 
 // Ekspor bot untuk digunakan oleh Vercel
-module.exports = bot;
+//module.exports = bot;
