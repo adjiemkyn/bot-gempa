@@ -82,3 +82,6 @@ async function checkForNewData() {
 
 // Interval untuk memeriksa data baru setiap 5 menit (300000 milidetik)
 setInterval(checkForNewData, 300000);
+
+// Ekspor bot untuk digunakan oleh Vercel
+module.exports = bot;
